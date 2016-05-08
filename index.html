@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arnon | AngularJS test</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css">
+        <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body ng-app="app">
+        <div class="container" ng-controller="Homepage">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>Welcome!</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <div class="clearfix">
+                                <div class="pull-left"><strong class="text-capitalize">Basics</strong></div>
+                                <div class="pull-right">
+                                    <button class="btn btn-success btn-xs"
+                                            type="button"
+                                            ng-click="isCollapsedBasics = !isCollapsedBasics">
+                                        <i class="fa"
+                                           ng-class="{'fa-chevron-up': (isCollapsedBasics),
+                                            'fa-chevron-down': (!isCollapsedBasics)}"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body tasklist"
+                             uib-collapse="isCollapsedBasics">
+                            <div class="well well-sm"
+                                 ng-repeat="task in tasks | filterBy: ['type']: 'basics'">
+                                <p>
+                                    <strong>{{task.name}}</strong>
+                                </p>
+                                <div ng-repeat="item in task.list" class="item">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">
+                                            <strong>{{item.taskname}}</strong>
+                                            <small>{{item.taskdescription}}</small>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <div class="clearfix">
+                                <div class="pull-left"><strong class="text-capitalize">Intermediate</strong></div>
+                                <div class="pull-right">
+                                    <button class="btn btn-info btn-xs"
+                                            type="button"
+                                            ng-click="isCollapsedIntermediate = !isCollapsedIntermediate">
+                                        <i class="fa"
+                                           ng-class="{'fa-chevron-up': (isCollapsedIntermediate),
+                                            'fa-chevron-down': (!isCollapsedIntermediate)}"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body tasklist"
+                             uib-collapse="isCollapsedIntermediate">
+                            <div class="well well-sm"
+                                 ng-repeat="task in tasks | filterBy: ['type']: 'intermediate'">
+                                <p>
+                                    <strong>{{task.name}}</strong>
+                                </p>
+                                <div ng-repeat="item in task.list" class="item">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">
+                                            <strong>{{item.taskname}}</strong>
+                                            <small>{{item.taskdescription}}</small>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <div class="clearfix">
+                                <div class="pull-left"><strong class="text-capitalize">Advanced</strong></div>
+                                <div class="pull-right">
+                                    <button class="btn btn-danger btn-xs"
+                                            type="button"
+                                            ng-click="isCollapsedAdvanced = !isCollapsedAdvanced">
+                                        <i class="fa"
+                                           ng-class="{'fa-chevron-up': (isCollapsedAdvanced),
+                                            'fa-chevron-down': (!isCollapsedAdvanced)}"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body tasklist"
+                             uib-collapse="isCollapsedAdvanced">
+                            <div class="well well-sm"
+                                 ng-repeat="task in tasks | filterBy: ['type']: 'advanced'">
+                                <p>
+                                    <strong>{{task.name}}</strong>
+                                </p>
+                                <div ng-repeat="item in task.list" class="item">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">
+                                            <strong>{{item.taskname}}</strong>
+                                            <small>{{item.taskdescription}}</small>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <canvas id="base" class="chart-base" chart-type="type"
+                            chart-data="data" chart-labels="labels" chart-legend="true"
+                            chart-colours="colours">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dependencies -->
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/Chart.js/Chart.js"></script>
+        <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+        <script src="bower_components/angular-filter/dist/angular-filter.min.js"></script>
+
+        <!-- Modules -->
+        <script src="js/app.js"></script>
+
+        <!-- Controllers -->
+        <script src="js/controllers/Homepage.js"></script>
+
+        <!-- Directives -->
+
+        <!-- Services -->
+        <script src="js/services/Tasks.js"></script>
+    </body>
+</html>

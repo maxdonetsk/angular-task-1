@@ -1,0 +1,80 @@
+[
+    {
+        "id": "1",
+        "name": "Organize an environment",
+        "type": "basics",
+        "created": "2016-05-08 10:10",
+        "list": [
+            {
+                "taskname": "Install npm",
+                "taskdescription": "Install npm, young padavan!"
+            },
+            {
+                "taskname": "Install bower",
+                "taskdescription": "Install bower, young padavan!"
+            }
+        ]
+    },
+    {
+        "id": "2",
+        "name": "Pull data from JSON file",
+        "type": "intermediate",
+        "created": "2016-05-08 10:20",
+        "list": [
+            {
+                "taskname": "Create an Angular factory to pull data from JSON",
+                "taskdescription": "Do it, dude!"
+            },
+            {
+                "taskname": "Filter this data in the interface",
+                "taskdescription": ""
+            }
+        ]
+    },
+    {
+        "id": "3",
+        "name": "Show data with d3.js or similar library",
+        "type": "advanced",
+        "created": "2016-05-08 10:30",
+        "list": [
+            {
+                "taskname": "Add a chart!",
+                "taskdescription": "Learn it and you will be a king!"
+            }
+        ]
+    },
+    {
+        "id": "4",
+        "name": "Show data with d3.js or similar library",
+        "type": "advanced",
+        "created": "2016-05-08 10:30",
+        "list": [
+            {
+                "taskname": "Add toolbars for chart!",
+                "taskdescription": "Learn how to do it it and you will be a king!"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "Test task",
+        "type": "basics",
+        "created": "2016-05-08 11:30",
+        "list": [
+            {
+                "taskname": "Oops"
+            }
+        ]
+    },
+    {
+        "id": "5",
+        "name": "It works!",
+        "type": "advanced",
+        "created": "2016-05-08 11:30",
+        "list": [
+            {
+                "taskname": "Just change tasks.json file in data folder"
+            }
+        ]
+    }
+]

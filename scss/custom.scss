@@ -1,0 +1,45 @@
+/*
+Write custom rules here ONLY!
+*/
+
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_mixins.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+.tasklist {
+    &.panel-body {
+        padding: 5px;
+    }
+
+    .well {
+        margin-bottom: 5px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .item {
+        &:not(:last-of-type) {
+            margin-bottom: 10px;
+        }
+    }
+
+    .checkbox {
+        > label {
+            small {
+                display: block;
+            }
+        }
+    }
+
+    input[type="checkbox"] {
+        &:checked {
+            ~ strong, ~ small {
+                text-decoration: line-through;
+                opacity: 0.5;
+            }
+        }
+    }
+}

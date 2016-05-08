@@ -1,0 +1,68 @@
+/*
+ONLY mixins, no code here! 
+*/
+
+@import "variables.scss";
+
+/*
+Mixin for vendor-prefixes.
+Example: @include prefix((transform: translateY(-50%)));
+*/
+@mixin prefix($scope, $vendors: webkit moz ms o) {
+    @each $prop, $value in $scope {
+        @if $vendors {
+            @each $vendor in $vendors {
+                #{"-" + $vendor + "-" + $prop}: #{$value};
+            }
+        }
+        // Dump regular property anyway
+        #{$prop}: #{$value};
+    }
+}
+
+/*
+Mixin for background-size cover.
+Example: @include background-size-cover;
+*/
+@mixin background-size-cover {
+    -webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;
+}
+
+/*
+Mixin for calc.
+Example: @include calc(width, "100% - 100px");
+*/
+@mixin calc($property, $expression) { 
+    #{$property}: initial;
+    #{$property}: -webkit-calc(#{$expression}); 
+    #{$property}: calc(#{$expression}); 
+}
+
+/*
+Mixin for form-control-focus.
+Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+*/
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+/*
+Mixin for form-control-focus.
+Example: @include form-control-focus;
+*/
+@mixin form-control-focus($color: $input-border-focus) {
+    $color-rgba: rgba(red($color), green($color), blue($color), .6);
+    &:focus {
+        border-color: $color;
+        outline: 0;
+        @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $color-rgba);
+    }
+}

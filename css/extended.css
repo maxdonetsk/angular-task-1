@@ -1,0 +1,72 @@
+/*
+Override default rules of all frameworks and libraries here ONLY!
+*/
+/*
+ONLY variables, no code here! 
+*/
+/*Custom variables*/
+/*Bootstrap variables are below*/
+/*FontAwesome variables*/
+/*
+ONLY mixins, no code here! 
+*/
+/*
+ONLY variables, no code here! 
+*/
+/*Custom variables*/
+/*Bootstrap variables are below*/
+/*FontAwesome variables*/
+/*
+Mixin for vendor-prefixes.
+Example: @include prefix((transform: translateY(-50%)));
+*/
+/*
+Mixin for background-size cover.
+Example: @include background-size-cover;
+*/
+/*
+Mixin for calc.
+Example: @include calc(width, "100% - 100px");
+*/
+/*
+Mixin for form-control-focus.
+Example: @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+*/
+/*
+Mixin for form-control-focus.
+Example: @include form-control-focus;
+*/
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-kerning: normal; }
+
+h1, .h1 {
+  font-size: 60px; }
+
+h2, .h2 {
+  font-size: 48px; }
+
+h3, .h3 {
+  font-size: 30px; }
+
+h4, .h4 {
+  font-size: 26px; }
+
+h5, .h5 {
+  font-size: 20px; }
+
+h6, .h6 {
+  font-size: 16px; }
+
+/*# sourceMappingURL=extended.css.map */
